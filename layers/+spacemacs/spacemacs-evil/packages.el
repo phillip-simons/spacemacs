@@ -30,6 +30,7 @@
         (evil-escape :location (recipe :fetcher github
                                        :repo "smile13241324/evil-escape"))
         evil-exchange
+        evil-fringe-mark
         evil-goggles
         evil-iedit-state
         evil-indent-plus
@@ -154,6 +155,12 @@
                   'evil-exchange-cancel)
       (define-key evil-visual-state-map evil-exchange-cancel-key
                   'evil-exchange-cancel))))
+
+(defun spacemacs-evil/init-evil-fringe-mark ()
+  (use-package evil-fringe-mark
+    :config
+    (setq-default evil-fringe-mark-show-special t)
+    (global-evil-fringe-mark-mode)))
 
 (defun spacemacs-evil/init-evil-goggles ()
   (use-package evil-goggles
